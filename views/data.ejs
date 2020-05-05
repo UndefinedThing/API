@@ -1,0 +1,34 @@
+<%- include("_header") -%>
+
+<h1>Liste de CPU (<%= model.length %>)</h1>
+
+<div class="table-responsive-sm">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Socket</th>
+        <th>Chipset</th>
+        <th>Nb_coeur</th>
+        <th>Frequnce</th>
+        <th>Cache</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (const cpu of model) { %>
+      <tr>
+        <td><%= cpu.Nom %></td>
+        <td><%= cpu.Type %></td>
+        <td><%= cpu.Socket %></td>
+        <td><%= cpu.Chipset %></td>
+        <td><%= cpu.Nb_coeur %></td>
+        <td><%= cpu.Frequence %></td>
+        <td><%= cpu.Cache %></td>
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+
+<%- include("_footer") -%>
